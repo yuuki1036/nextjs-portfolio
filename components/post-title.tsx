@@ -1,15 +1,18 @@
-import { ReactNode } from 'react'
+import { Box, Grid, Typography } from "@material-ui/core";
+import { ReactNode } from "react";
 
 type Props = {
-  children?: ReactNode
-}
+  children?: ReactNode;
+};
 
 const PostTitle = ({ children }: Props) => {
   return (
-    <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-tight md:leading-none mb-12 text-center md:text-left">
-      {children}
-    </h1>
-  )
-}
+    <Box mt={7}>
+      <Grid container justifyContent="center">
+        <Typography variant="h2">{children}</Typography>
+      </Grid>
+    </Box>
+  );
+};
 
-export default PostTitle
+export default PostTitle;

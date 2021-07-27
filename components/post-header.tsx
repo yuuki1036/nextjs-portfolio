@@ -1,3 +1,4 @@
+import { Box, Grid } from "@material-ui/core";
 import Author from "../types/author";
 import CoverImage from "./cover-image";
 import DateFormatter from "./date-formatter";
@@ -8,28 +9,18 @@ type Props = {
   title: string;
   coverImage: string;
   date: string;
-  author: Author;
 };
 
-const PostHeader = ({
-  title,
-  coverImage,
-  date,
-  author,
-}: Props) => {
+const PostHeader = ({ title, coverImage, date }: Props) => {
   return (
     <>
+      <Box mt={5}>
+        <Grid container justifyContent="center">
+          <CoverImage title={title} src={coverImage} />
+        </Grid>
+      </Box>
       <PostTitle>{title}</PostTitle>
-      <div className="hidden md:block md:mb-12">
-        <Avatar size="small" />
-      </div>
-      <div className="mb-8 md:mb-16 sm:mx-0">
-        <CoverImage title={title} src={coverImage} />
-      </div>
       <div className="max-w-2xl mx-auto">
-        <div className="block md:hidden mb-6">
-          <Avatar size="small" />
-        </div>
         <div className="mb-6 text-lg">
           <DateFormatter dateString={date} />
         </div>

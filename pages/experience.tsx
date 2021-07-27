@@ -12,10 +12,13 @@ const Experience = () => {
   return (
     <Layout>
       <Container>
-        <MyHeader isIndex={false} />
+        <MyHeader
+          isIndex={false}
+          pageTitle={"experience"}
+        />
         <Typography variant="h4">Basic</Typography>
         <SkillSet skills={baseSkills} />
-        <Typography variant="h4">Frame Work</Typography>
+        <Typography variant="h4">Framework</Typography>
         <SkillSet skills={FrameworkSkills} />
       </Container>
     </Layout>

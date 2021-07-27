@@ -1,14 +1,19 @@
-import { Box, Typography } from "@material-ui/core";
-import { VFC } from "react";
+import { Box, Grid, Typography } from "@material-ui/core";
+import Link from "next/link";
+import { FC } from "react";
 
-const Profile: VFC = () => {
+const Profile: FC = () => {
   return (
     <Box mt={5}>
-      <Typography variant="h6">
-        WEBエンジニアです。フロントエンド・バックエンド開発を経験。
-        <br />
-        主な開発言語はJavaScript, PHP, HTML/CSS です。
-      </Typography>
+      <Grid container>
+        <Typography variant="h6">
+          WEBエンジニアです。フロントエンド・バックエンド開発を経験。詳細は
+          <Link href="/experience">
+            <a className="hover:underline">こちら</a>
+          </Link>
+          。
+        </Typography>
+      </Grid>
     </Box>
   );
 };

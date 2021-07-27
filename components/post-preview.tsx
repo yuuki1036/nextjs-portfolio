@@ -1,3 +1,4 @@
+import { Box } from "@material-ui/core";
 import Link from "next/link";
 import Author from "../types/author";
 import CoverImage from "./cover-image";
@@ -9,7 +10,6 @@ type Props = {
   coverImage: string;
   date: string;
   excerpt: string;
-  author: Author;
   slug: string;
 };
 
@@ -18,18 +18,17 @@ const PostPreview = ({
   coverImage,
   date,
   excerpt,
-  author,
   slug,
 }: Props) => {
   return (
-    <div>
-      <div className="mb-5">
+    <>
+      <Box>
         <CoverImage
           slug={slug}
           title={title}
           src={coverImage}
         />
-      </div>
+      </Box>
       <h3 className="text-3xl mb-3 leading-snug">
         <Link as={`/posts/${slug}`} href="/posts/[slug]">
           <a className="hover:underline">{title}</a>
@@ -41,8 +40,7 @@ const PostPreview = ({
       <p className="text-lg leading-relaxed mb-4">
         {excerpt}
       </p>
-      <Avatar size="small" />
-    </div>
+    </>
   );
 };
 

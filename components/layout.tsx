@@ -13,7 +13,7 @@ const Layout: VFC<Props> = ({ children }) => {
   return (
     <>
       <Container maxWidth="md">
-        <Box mt={10} className="min-h-screen">
+        <Box mt={6} className="min-h-screen">
           <main>{children}</main>
         </Box>
         <Footer />

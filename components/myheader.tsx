@@ -1,26 +1,32 @@
 import { Box, Grid, Typography } from "@material-ui/core";
-import { VFC } from "react";
+import { FC } from "react";
 import MyAvatar from "./myavatar";
 import { SITE_TITLE } from "lib/constants";
 
 type Props = {
-  isIndex: boolean;
+  isIndex?: boolean;
+  pageTitle?: string;
 };
 
-const MyHeader: VFC<Props> = ({ isIndex }) => {
+const MyHeader: FC<Props> = ({
+  isIndex = true,
+  pageTitle,
+}) => {
   return (
     <>
       {isIndex ? (
-        <Box>
-          <Box display="flex" justifyContent="center">
+        <>
+          <Grid container justifyContent="center">
             <MyAvatar size="large" />
+          </Grid>
+          <Box mt={4}>
+            <Grid container justifyContent="center">
+              <Typography variant="h3" component="h1">
+                {SITE_TITLE}
+              </Typography>
+            </Grid>
           </Box>
-          <Box textAlign="center" mt={4}>
-            <Typography variant="h3" component="h1">
-              {SITE_TITLE}
-            </Typography>
-          </Box>
-        </Box>
+        </>
       ) : (
         <Grid
           container
@@ -33,7 +39,7 @@ const MyHeader: VFC<Props> = ({ isIndex }) => {
           </Grid>
           <Grid item>
             <Typography variant="h3" component="h1">
-              experience
+              {pageTitle}
             </Typography>
           </Grid>
         </Grid>

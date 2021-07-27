@@ -40,11 +40,7 @@ export const baseSkills = [
   },
   {
     title: "クラウドサービス",
-    items: ["Firebase", "AWS EC2", "Heroku", "Vercel"],
-  },
-  {
-    title: "CMS",
-    items: ["WordPress"],
+    items: ["AWS EC2", "Heroku", "Firebase", "Vercel"],
   },
   {
     title: "コンテナ管理",
@@ -54,6 +50,10 @@ export const baseSkills = [
     title: "CI/CD",
     items: ["Travis CI"],
   },
+  {
+    title: "CMS",
+    items: ["WordPress"],
+  },
 ];
 
 export const FrameworkSkills = [
@@ -61,9 +61,11 @@ export const FrameworkSkills = [
     title: "JavaScript",
     items: [
       "Node.js",
+      "TypeScript",
       "React",
       "Next.js",
       "Vue.js",
+      "Express",
       "JQuery",
     ],
   },
