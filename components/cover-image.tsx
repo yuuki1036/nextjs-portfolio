@@ -10,7 +10,7 @@ type Props = {
 
 const CoverImage = ({ title, src, slug }: Props) => {
   const image = (
-    <img src={src} alt={`Cover Image for ${title}`} />
+    <Image src={src} alt={`Cover Image for ${title}`} />
   );
   return (
     <div className="sm:mx-0">
