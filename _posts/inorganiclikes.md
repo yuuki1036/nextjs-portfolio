@@ -1,7 +1,7 @@
 ---
 title: 'InorganicLikes'
-excerpt: 'Mac用デスクトップアプリ・インスタグラム自動化ツールです。'
-coverImage: '/images/works/main_window.jpg'
+excerpt: 'Mac用デスクトップアプリ・SNS自動化ツール'
+coverImage: '/images/works/inorganiclikes.png'
 date: '2019-03-24'
 ogImage:
   url: '/assets/blog/dynamic-routing/cover.jpg'
@@ -14,7 +14,7 @@ ogImage:
 
 ### 開発経緯
 
-友人がインスタグラムを仕事で使っていて、毎日「いいね」をするのが大変と言っていた。
+友人がSNSを仕事で使っていて、毎日「いいね」をするのが大変と言っていた。
 
 ### 仕様
 
@@ -25,7 +25,7 @@ GUI作成：tkinter
 データベース暗号化：pysqlciper3  
 バイナリ化：py2app  
 ブラウザテストツール：selenium  
-使用ブラウザ：googlechrome  
+使用ブラウザ：Chrome  
 
 ### 主な機能
 
@@ -49,7 +49,7 @@ GUI作成：tkinter
 ・メディア読込みエラーなどでタスクが継続できない場合、タスクをリトライします。  
 ・データベースは256bit AESで暗号化しています。  
 
-#### 学んだこと
+### 学んだこと
 
 ・スクリプトファイルのバイナリ化  
 ・オブジェクト指向プログラミング  

@@ -8,10 +8,10 @@ export const getPostSlugs = () => {
   return fs.readdirSync(postsDirectory);
 };
 
-export function getPostBySlug(
+export const getPostBySlug = (
   slug: string,
   fields: string[] = [],
-) {
+) => {
   const realSlug = slug.replace(/\.md$/, "");
   const fullPath = join(postsDirectory, `${realSlug}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
@@ -38,11 +38,10 @@ export function getPostBySlug(
   });
 
   return items;
-}
+};
 
 export const getAllPosts = (fields: string[] = []) => {
   const slugs = getPostSlugs();
-  console.log(slugs);
   const posts = slugs
     .map((slug) => getPostBySlug(slug, fields))
     // sort posts by date in descending order

@@ -1,4 +1,4 @@
-import { Box } from "@material-ui/core";
+import { Box, Grid } from "@material-ui/core";
 import Link from "next/link";
 import Author from "../types/author";
 import CoverImage from "./cover-image";
@@ -21,26 +21,24 @@ const PostPreview = ({
   slug,
 }: Props) => {
   return (
-    <>
-      <Box>
-        <CoverImage
-          slug={slug}
-          title={title}
-          src={coverImage}
-        />
-      </Box>
-      <h3 className="text-3xl mb-3 leading-snug">
+    <Grid item sm={10} md={12}>
+      <CoverImage
+        slug={slug}
+        title={title}
+        src={coverImage}
+      />
+      <h3 className="text-3xl mt-3 mb-1 leading-snug">
         <Link as={`/posts/${slug}`} href="/posts/[slug]">
           <a className="hover:underline">{title}</a>
         </Link>
       </h3>
-      <div className="text-lg mb-4">
+      <div className="text-lg mb-1">
         <DateFormatter dateString={date} />
       </div>
       <p className="text-lg leading-relaxed mb-4">
         {excerpt}
       </p>
-    </>
+    </Grid>
   );
 };
 

@@ -1,6 +1,4 @@
-import { Grid } from "@material-ui/core";
-import { PlayCircleOutlineTwoTone } from "@material-ui/icons";
-import Link from "next/link";
+import { FC } from "react";
 import Container from "../components/container";
 import Layout from "../components/layout";
 import Profile from "../components/profile";
@@ -13,16 +11,15 @@ type Props = {
   allPosts: Post[];
 };
 
-const Index = ({ allPosts }: Props) => {
-  const morePosts = allPosts.slice(1);
+const Index: FC<Props> = ({ allPosts }) => {
   return (
     <>
       <Layout>
         <Container>
           <MyHeader />
           <Profile />
-          {morePosts.length > 0 && (
-            <Works posts={morePosts} />
+          {allPosts.length > 0 && (
+            <Works posts={allPosts} />
           )}
         </Container>
       </Layout>
