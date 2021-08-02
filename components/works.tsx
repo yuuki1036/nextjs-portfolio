@@ -10,19 +10,13 @@ type Props = {
 const Works: FC<Props> = ({ posts }) => {
   return (
     <section>
-      <Box mt={6}>
+      <Box mt={8}>
         <Typography variant="h3">Works</Typography>
       </Box>
       <Box mt={3}>
         <Grid container spacing={6}>
           {posts.map((post, i) => (
-            <Grid
-              item
-              key={i}
-              justifyContent="center"
-              sm={12}
-              md={6}
-            >
+            <Grid item key={i} sm={12} md={6}>
               <PostPreview
                 key={post.slug}
                 title={post.title}
