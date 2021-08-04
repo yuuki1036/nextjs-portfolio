@@ -23,9 +23,9 @@ const PostPreview = ({
   return (
     <Grid item sm={10} md={12}>
       <CoverImage
-        slug={slug}
         title={title}
         src={coverImage}
+        slug={slug}
       />
       <h3 className="text-3xl mt-3 mb-1 leading-snug">
         <Link as={`/posts/${slug}`} href="/posts/[slug]">

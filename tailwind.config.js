@@ -9,6 +9,13 @@ module.exports = {
         success: "#0070f3",
         cyan: "#79FFE1",
       },
+      screen: {
+        xs: "0px",
+        sm: "450px",
+        md: "768px",
+        lg: "900px",
+        xl: "1200px",
+      },
       spacing: {
         28: "7rem",
       },

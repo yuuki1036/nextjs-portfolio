@@ -21,7 +21,7 @@ const Profile: FC = () => {
               <Link href="/experience">
                 <a>
                   <Typography variant="h6">
-                    スキルセット一覧
+                    経験・スキル一覧
                   </Typography>
                 </a>
               </Link>

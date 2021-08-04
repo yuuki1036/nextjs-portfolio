@@ -1,5 +1,6 @@
 import {
   Box,
+  Divider,
   Grid,
   List,
   ListItemText,
@@ -13,22 +14,27 @@ type Props = {
 };
 
 const SkillSet: VFC<Props> = ({ skills }) => (
-  <Box my={5}>
-    <Grid container justifyContent="flex-start">
+  <Box my={2}>
+    <Grid container spacing={2} alignItems="baseline">
       {skills.map((skill, i) => {
         const items = skill.items;
         return (
-          <Grid item xs={3} key={i}>
+          <Grid item xs={6} md={3} key={i}>
             <Box mt={3}>
-              <Typography variant="h5">
-                {skill.title}
+              <Typography variant="body1">
+                <Box
+                  fontWeight="fontWeightBold"
+                  m={0}
+                  p={0}
+                >
+                  {skill.title}
+                </Box>
               </Typography>
+              <Divider />
               <List>
                 {items.map((item, j) => {
                   return (
-                    <Box key={j}>
-                      <ListItemText primary={item} />
-                    </Box>
+                    <ListItemText primary={item} key={j} />
                   );
                 })}
               </List>

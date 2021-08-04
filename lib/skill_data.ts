@@ -4,7 +4,7 @@ export const baseSkills = [
     items: ["Mac", "Windows", "Linux"],
   },
   {
-    title: "プログラム言語",
+    title: "言語",
     items: [
       "JavaScript",
       "PHP",
@@ -31,10 +31,6 @@ export const baseSkills = [
     ],
   },
   {
-    title: "バージョン管理",
-    items: ["Git", "GitHub", "Bitbucket"],
-  },
-  {
     title: "Webサーバー",
     items: ["Apache", "Nginx"],
   },
@@ -43,7 +39,11 @@ export const baseSkills = [
     items: ["AWS EC2", "Heroku", "Firebase", "Vercel"],
   },
   {
-    title: "コンテナ管理",
+    title: "バージョン管理",
+    items: ["Git", "GitHub", "Bitbucket"],
+  },
+  {
+    title: "コンテナ",
     items: ["Docker"],
   },
   {
@@ -70,7 +70,23 @@ export const FrameworkSkills = [
     ],
   },
   {
+    title: "Python",
+    items: ["Django"],
+  },
+  {
     title: "CSS",
     items: ["BootStrap", "Tailwind CSS", "Material-UI"],
   },
+  {
+    title: "Component",
+    items: ["Material-UI"],
+  },
+];
+
+export const others = [
+  "フルスクラッチECサイト（月間15万PV）の全面リニューアル作業",
+  "ECサイト管理画面の設計・実装",
+  "WebPageTest, Google Lighthouse 等を用いたサイトパフォーマンス解析・改善",
+  "暗号化の知識・実装",
+  "競技プログラミングへの参加（atcoder, paiza 等）",
 ];

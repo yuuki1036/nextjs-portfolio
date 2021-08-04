@@ -1,8 +1,10 @@
+import internal from "stream";
 import { Box, Container, Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 import cn from "classnames";
 import Image from "next/image";
 import Link from "next/link";
+import { FC } from "react";
 import theme from "pages/theme";
 
 type Props = {
@@ -11,45 +13,38 @@ type Props = {
   slug?: string;
 };
 
-const useStyles = makeStyles((theme) => ({
-  small: {},
-  large: {
-    boxShadow: "0 8px 30px rgba(0, 0, 0, 0.12)",
-  },
-  image: {
-    objectFit: "cover",
-  },
-}));
-
-const CoverImage = ({ title, src, slug }: Props) => {
-  const classes = useStyles(theme);
-
+const CoverImage: FC<Props> = ({ title, src, slug }) => {
   const image = (
     <Grid container>
-      <Box
-        className={
-          "transition duration-200 shadow-small hover:shadow-medium"
-        }
-      >
-        <Grid container>
-          <Image
-            src={src}
-            alt={`Cover Image for ${title}`}
-            width={440}
-            height={220}
-          />
-        </Grid>
-      </Box>
+      <Image
+        src={src}
+        alt={`Cover Image for ${title}`}
+        width={440}
+        height={220}
+      />
     </Grid>
   );
   return (
     <div className="sm:mx-0">
       {slug ? (
-        <Link as={`/posts/${slug}`} href="/posts/[slug]">
-          <a aria-label={title}>{image}</a>
-        </Link>
+        <Grid container>
+          <Box
+            className={
+              "transition duration-200 shadow-small hover:shadow-medium"
+            }
+          >
+            <Link
+              as={`/posts/${slug}`}
+              href="/posts/[slug]"
+            >
+              <a aria-label={title}>{image}</a>
+            </Link>
+          </Box>
+        </Grid>
       ) : (
-        image
+        <Grid container>
+          <Box className={"shadow-small"}>{image}</Box>
+        </Grid>
       )}
     </div>
   );
