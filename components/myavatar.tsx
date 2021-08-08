@@ -1,4 +1,9 @@
-import { Avatar, Box, makeStyles } from "@material-ui/core";
+import {
+  Avatar,
+  Box,
+  makeStyles,
+  Theme,
+} from "@material-ui/core";
 import { VFC } from "react";
 import theme from "pages/theme";
 
@@ -6,7 +11,7 @@ type Props = {
   size: "small" | "large";
 };
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme: Theme) => ({
   small: {
     width: theme.spacing(6),
     height: theme.spacing(6),

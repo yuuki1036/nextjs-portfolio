@@ -12,11 +12,13 @@ type Props = {
 const Layout: VFC<Props> = ({ children }) => {
   return (
     <>
-      <Container maxWidth="md">
-        <Box mt={6} className="min-h-screen">
-          <main>{children}</main>
-        </Box>
-        <Footer />
+      <Container maxWidth={false}>
+        <Container maxWidth="md">
+          <Box mt={4}>
+            <main>{children}</main>
+          </Box>
+          <Footer />
+        </Container>
       </Container>
     </>
   );

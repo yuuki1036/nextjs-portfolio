@@ -18,30 +18,30 @@ import {
 const Experience = () => {
   return (
     <Layout>
-      <Container>
+      <Box mb={8}>
         <MyHeader
           isIndex={false}
           pageTitle={"experience"}
         />
-        <Container className="rounded-md bg-gray-50">
-          <Box mt={4} pt={2} pb={3} px={1}>
+        <Box className="rounded-md bg-gray-50">
+          <Box mt={4} pt={2} pb={3} px={2}>
             <Typography variant="h5">Basic</Typography>
             <SkillSet skills={baseSkills} />
           </Box>
-        </Container>
-        <Container className="rounded-md bg-gray-50">
-          <Box mt={4} pt={2} pb={3} px={1}>
+        </Box>
+        <Box className="rounded-md bg-gray-50">
+          <Box mt={4} pt={2} pb={3} px={2}>
             <Typography variant="h5">Framework</Typography>
             <SkillSet skills={FrameworkSkills} />
           </Box>
-        </Container>
-        <Container className="rounded-md bg-gray-50">
-          <Box mt={4} pt={2} pb={3} px={1}>
+        </Box>
+        <Box className="rounded-md bg-gray-50">
+          <Box mt={4} pt={2} pb={3} px={2}>
             <Typography variant="h5">Others</Typography>
             <OtherSkillSet skills={others} />
           </Box>
-        </Container>
-      </Container>
+        </Box>
+      </Box>
     </Layout>
   );
 };

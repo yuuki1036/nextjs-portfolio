@@ -1,4 +1,9 @@
-import { Box, Grid, Typography } from "@material-ui/core";
+import {
+  Box,
+  Divider,
+  Grid,
+  Typography,
+} from "@material-ui/core";
 import { FC } from "react";
 import Post from "../types/post";
 import PostPreview from "./post-preview";
@@ -11,9 +16,10 @@ const Works: FC<Props> = ({ posts }) => {
   return (
     <section>
       <Box mt={8}>
-        <Typography variant="h3">Works</Typography>
+        <Typography variant="h4">Works</Typography>
+        <Divider />
       </Box>
-      <Box mt={3}>
+      <Box mt={3} mb={5}>
         <Grid container spacing={6}>
           {posts.map((post, i) => (
             <Grid item key={i} sm={12} md={6}>

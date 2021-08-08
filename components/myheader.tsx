@@ -1,4 +1,10 @@
-import { Box, Grid, Typography } from "@material-ui/core";
+import {
+  Box,
+  Divider,
+  Grid,
+  Typography,
+} from "@material-ui/core";
+import Link from "next/link";
 import { FC } from "react";
 import MyAvatar from "./myavatar";
 import { SITE_TITLE } from "lib/constants";
@@ -28,21 +34,25 @@ const MyHeader: FC<Props> = ({
           </Box>
         </>
       ) : (
-        <Grid
-          container
-          spacing={4}
-          justifyContent="center"
-          alignItems="center"
-        >
-          <Grid item>
-            <MyAvatar size="small" />
-          </Grid>
-          <Grid item>
-            <Typography variant="h3" component="h1">
-              {pageTitle}
-            </Typography>
-          </Grid>
-        </Grid>
+        <>
+          <Box mb={1}>
+            <Grid container spacing={2} alignItems="center">
+              <Grid item>
+                <Link href="/" passHref>
+                  <a>
+                    <MyAvatar size="small" />
+                  </a>
+                </Link>
+              </Grid>
+              <Grid item>
+                <Typography variant="h4" component="h1">
+                  {pageTitle}
+                </Typography>
+              </Grid>
+            </Grid>
+          </Box>
+          <Divider />
+        </>
       )}
     </>
   );

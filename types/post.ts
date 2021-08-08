@@ -1,16 +1,19 @@
-import Author from './author'
+import Spec from "./spec";
 
-type PostType = {
-  slug: string
-  title: string
-  date: string
-  coverImage: string
-  author: Author
-  excerpt: string
-  ogImage: {
-    url: string
-  }
-  content: string
-}
+type Post = {
+  slug: string;
+  title: string;
+  excerpt: string;
+  coverImage: string;
+  date: string;
+  launch?: string;
+  source?: string;
+  overView: string[];
+  chronology?: string[];
+  spec: Spec;
+  main: string[];
+  others?: string[];
+  learned?: string[];
+};
 
-export default PostType
+export default Post;

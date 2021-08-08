@@ -1,25 +1,25 @@
+import { Box } from "@material-ui/core";
 import ErrorPage from "next/error";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import Container from "../../components/container";
-import Header from "../../components/header";
 import Layout from "../../components/layout";
-import PostBody from "../../components/post-body";
 import PostHeader from "../../components/post-header";
 import PostTitle from "../../components/post-title";
 import { getPostBySlug, getAllPosts } from "../../lib/api";
 import { SITE_NAME } from "../../lib/constants";
-import markdownToHtml from "../../lib/markdownToHtml";
-import PostType from "../../types/post";
+import Post from "../../types/post";
 import MyHeader from "components/myheader";
+import PostBody from "components/post-body";
+import PostItemNormal from "components/post-item-normal";
+import PostItemSpecs from "components/post-item-specs";
 
 type Props = {
-  post: PostType;
-  morePosts: PostType[];
-  preview?: boolean;
+  post: Post;
+  morePosts: Post[];
 };
 
-const Post = ({ post, morePosts, preview }: Props) => {
+const PostRender = ({ post, morePosts }: Props) => {
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
@@ -32,19 +32,21 @@ const Post = ({ post, morePosts, preview }: Props) => {
           <PostTitle>Loading…</PostTitle>
         ) : (
           <>
-            <article className="mb-32">
-              <Head>
-                <title>
-                  {post.title} | {SITE_NAME}
-                </title>
-              </Head>
-              <PostHeader
-                title={post.title}
-                coverImage={post.coverImage}
-                date={post.date}
-              />
-              <PostBody content={post.content} />
-            </article>
+            <Head>
+              <title>
+                {post.title} | {SITE_NAME}
+              </title>
+            </Head>
+            <PostHeader
+              title={post.title}
+              coverImage={post.coverImage}
+              date={post.date}
+              launch={post.launch}
+              source={post.source}
+            />
+            <Box mt={4} mb={10}>
+              <PostBody post={post} />
+            </Box>
           </>
         )}
       </Container>
@@ -52,7 +54,7 @@ const Post = ({ post, morePosts, preview }: Props) => {
   );
 };
 
-export default Post;
+export default PostRender;
 
 type Params = {
   params: {
@@ -61,28 +63,19 @@ type Params = {
 };
 
 export async function getStaticProps({ params }: Params) {
-  const post = getPostBySlug(params.slug, [
-    "title",
-    "date",
-    "slug",
-    "content",
-    "coverImage",
-  ]);
-  const content = await markdownToHtml(post.content || "");
+  const post = getPostBySlug(params.slug);
 
   return {
     props: {
       post: {
         ...post,
-        content,
       },
     },
   };
 }
 
 export async function getStaticPaths() {
-  const posts = getAllPosts(["slug"]);
-  console.log(posts);
+  const posts = getAllPosts();
   return {
     paths: posts.map((posts) => {
       return {

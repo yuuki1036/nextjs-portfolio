@@ -13,20 +13,24 @@ const Profile: FC = () => {
           React, Next.js を勉強中です。
         </Typography>
         <Box mt={2}>
-          <Grid container spacing={1} alignItems="center">
-            <Grid item>
-              <PlayCircleOutline fontSize="large" />
-            </Grid>
-            <Grid item className="hover:underline">
-              <Link href="/experience">
-                <a>
+          <Link href="/experience" passHref>
+            <a>
+              <Grid
+                container
+                spacing={1}
+                alignItems="center"
+              >
+                <Grid item>
+                  <PlayCircleOutline fontSize="large" />
+                </Grid>
+                <Grid item>
                   <Typography variant="h6">
                     経験・スキル一覧
                   </Typography>
-                </a>
-              </Link>
-            </Grid>
-          </Grid>
+                </Grid>
+              </Grid>
+            </a>
+          </Link>
         </Box>
       </Grid>
     </Box>

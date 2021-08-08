@@ -1,4 +1,5 @@
 import {
+  colors,
   createTheme,
   responsiveFontSizes,
 } from "@material-ui/core";
@@ -6,6 +7,9 @@ import { red } from "@material-ui/core/colors";
 
 let theme = createTheme({
   palette: {
+    primary: {
+      main: colors.blue[800],
+    },
     error: {
       main: red.A400,
     },

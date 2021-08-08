@@ -1,6 +1,5 @@
 import { Box, Grid } from "@material-ui/core";
 import Link from "next/link";
-import Author from "../types/author";
 import CoverImage from "./cover-image";
 import DateFormatter from "./date-formatter";
 import Avatar from "./myavatar";

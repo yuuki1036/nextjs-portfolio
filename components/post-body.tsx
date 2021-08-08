@@ -1,18 +1,46 @@
-import markdownStyles from './markdown-styles.module.css'
+import { Box } from "@material-ui/core";
+import { FC } from "react";
+import markdownStyles from "./markdown-styles.module.css";
+import PostItemNormal from "./post-item-normal";
+import PostItemSpecs from "./post-item-specs";
+import Post from "types/post";
 
 type Props = {
-  content: string
-}
+  post: Post;
+};
 
-const PostBody = ({ content }: Props) => {
+const PostBody: FC<Props> = ({ post }) => {
   return (
-    <div className="max-w-2xl mx-auto">
-      <div
-        className={markdownStyles['markdown']}
-        dangerouslySetInnerHTML={{ __html: content }}
+    <>
+      <PostItemNormal
+        title="概要"
+        sentences={post.overView}
       />
-    </div>
-  )
-}
+      {post.chronology && (
+        <PostItemNormal
+          title="開発経緯"
+          sentences={post.chronology}
+        />
+      )}
+      <PostItemSpecs title="仕様" specs={post.spec} />
+      <PostItemNormal
+        title="主な機能"
+        sentences={post.main}
+      />
+      {post.others && (
+        <PostItemNormal
+          title="その他機能"
+          sentences={post.others}
+        />
+      )}
+      {post.learned && (
+        <PostItemNormal
+          title="学んだこと"
+          sentences={post.learned}
+        />
+      )}
+    </>
+  );
+};
 
-export default PostBody
+export default PostBody;

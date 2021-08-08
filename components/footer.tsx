@@ -1,32 +1,62 @@
-import Container from './container'
-import { EXAMPLE_PATH } from '../lib/constants'
+import {
+  Box,
+  Divider,
+  Grid,
+  Typography,
+} from "@material-ui/core";
+import { EmailOutlined, GitHub } from "@material-ui/icons";
+import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="bg-accent-1 border-t border-accent-2">
-      <Container>
-        <div className="py-28 flex flex-col lg:flex-row items-center">
-          <h3 className="text-4xl lg:text-5xl font-bold tracking-tighter leading-tight text-center lg:text-left mb-10 lg:mb-0 lg:pr-4 lg:w-1/2">
-            Statically Generated with Next.js.
-          </h3>
-          <div className="flex flex-col lg:flex-row justify-center items-center lg:pl-4 lg:w-1/2">
+    <footer>
+      <Divider />
+      <Box mt={8} mb={8}>
+        <Grid container justifyContent="center">
+          <Grid item>
             <a
-              href="https://nextjs.org/docs/basic-features/pages"
-              className="mx-3 bg-black hover:bg-white hover:text-black border border-black text-white font-bold py-3 px-12 lg:px-8 duration-200 transition-colors mb-6 lg:mb-0"
+              href="https://github.com/yuuki1036"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Read Documentation
+              <Grid
+                container
+                spacing={2}
+                alignItems="center"
+              >
+                <Grid item>
+                  <GitHub fontSize="large" />
+                </Grid>
+                <Grid item>
+                  <Typography variant="h6">
+                    yuuki1036
+                  </Typography>
+                </Grid>
+              </Grid>
             </a>
-            <a
-              href={`https://github.com/vercel/next.js/tree/canary/examples/${EXAMPLE_PATH}`}
-              className="mx-3 font-bold hover:underline"
-            >
-              View on GitHub
-            </a>
-          </div>
-        </div>
-      </Container>
+            <Box mt={2}>
+              <a
+                href="mailto:yuuki1036@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Grid container spacing={2}>
+                  <Grid item>
+                    <EmailOutlined fontSize="large" />
+                  </Grid>
+                  <Grid item>
+                    <Typography variant="h6">
+                      yuuki1036@gmail.com
+                    </Typography>
+                  </Grid>
+                </Grid>
+              </a>
+            </Box>
+          </Grid>
+        </Grid>
+      </Box>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
