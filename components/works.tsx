@@ -19,7 +19,7 @@ const Works: FC<Props> = ({ posts }) => {
         <Typography variant="h4">Works</Typography>
         <Divider />
       </Box>
-      <Box mt={3} mb={5}>
+      <Box mt={4} mb={8}>
         <Grid container spacing={6}>
           {posts.map((post, i) => (
             <Grid item key={i} sm={12} md={6}>

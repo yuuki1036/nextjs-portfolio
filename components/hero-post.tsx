@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Author from "../types/author";
 import CoverImage from "./cover-image";
 import DateFormatter from "./date-formatter";
 import Avatar from "./myavatar";
@@ -9,7 +8,6 @@ type Props = {
   coverImage: string;
   date: string;
   excerpt: string;
-  author: Author;
   slug: string;
 };
 
@@ -18,7 +16,6 @@ const HeroPost = ({
   coverImage,
   date,
   excerpt,
-  author,
   slug,
 }: Props) => {
   return (

@@ -15,13 +15,9 @@ const Index: FC<Props> = ({ allPosts }) => {
   return (
     <>
       <Layout>
-        <Container>
-          <MyHeader />
-          <Profile />
-          {allPosts.length > 0 && (
-            <Works posts={allPosts} />
-          )}
-        </Container>
+        <MyHeader />
+        <Profile />
+        {allPosts.length > 0 && <Works posts={allPosts} />}
       </Layout>
     </>
   );

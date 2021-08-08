@@ -26,30 +26,28 @@ const PostRender = ({ post, morePosts }: Props) => {
   }
   return (
     <Layout>
-      <Container>
-        <MyHeader isIndex={false} pageTitle={"works"} />
-        {router.isFallback ? (
-          <PostTitle>Loading…</PostTitle>
-        ) : (
-          <>
-            <Head>
-              <title>
-                {post.title} | {SITE_NAME}
-              </title>
-            </Head>
-            <PostHeader
-              title={post.title}
-              coverImage={post.coverImage}
-              date={post.date}
-              launch={post.launch}
-              source={post.source}
-            />
-            <Box mt={4} mb={10}>
-              <PostBody post={post} />
-            </Box>
-          </>
-        )}
-      </Container>
+      <MyHeader isIndex={false} pageTitle={"works"} />
+      {router.isFallback ? (
+        <PostTitle>Loading…</PostTitle>
+      ) : (
+        <>
+          <Head>
+            <title>
+              {post.title} | {SITE_NAME}
+            </title>
+          </Head>
+          <PostHeader
+            title={post.title}
+            coverImage={post.coverImage}
+            date={post.date}
+            launch={post.launch}
+            source={post.source}
+          />
+          <Box mt={4} mb={10}>
+            <PostBody post={post} />
+          </Box>
+        </>
+      )}
     </Layout>
   );
 };

@@ -1,4 +1,4 @@
-import { Box, Grid } from "@material-ui/core";
+import { Box, Grid, Typography } from "@material-ui/core";
 import Link from "next/link";
 import CoverImage from "./cover-image";
 import DateFormatter from "./date-formatter";
@@ -20,24 +20,34 @@ const PostPreview = ({
   slug,
 }: Props) => {
   return (
-    <Grid item sm={10} md={12}>
-      <CoverImage
-        title={title}
-        src={coverImage}
-        slug={slug}
-      />
-      <h3 className="text-3xl mt-3 mb-1 leading-snug">
-        <Link as={`/posts/${slug}`} href="/posts/[slug]">
-          <a className="hover:underline">{title}</a>
-        </Link>
-      </h3>
-      <div className="text-lg mb-1">
-        <DateFormatter dateString={date} />
-      </div>
-      <p className="text-lg leading-relaxed mb-4">
-        {excerpt}
-      </p>
-    </Grid>
+    <article>
+      <Grid item sm={10} md={12}>
+        <CoverImage
+          title={title}
+          src={coverImage}
+          slug={slug}
+        />
+        <Box mt={2}>
+          <Link
+            as={`/posts/${slug}`}
+            href="/posts/[slug]"
+            passHref
+          >
+            <a>
+              <Typography variant="h5">{title}</Typography>
+            </a>
+          </Link>
+        </Box>
+        <Box>
+          <Typography variant="body1">
+            <DateFormatter dateString={date} />
+          </Typography>
+        </Box>
+        <Box>
+          <Typography variant="body1">{excerpt}</Typography>
+        </Box>
+      </Grid>
+    </article>
   );
 };
 

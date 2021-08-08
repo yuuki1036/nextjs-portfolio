@@ -1,6 +1,6 @@
 {
   "title": "InorganicLikes",
-  "excerpt": "Mac用デスクトップアプリ・SNS自動化ツール",
+  "excerpt": "SNS自動化アプリ",
   "coverImage": "/images/works/inorganiclikes.png",
   "date": "2019-03-24",
   "launch": "",
@@ -12,16 +12,18 @@
     "友人がSNSを仕事で使っていて、毎日「いいね」をするのが大変と言っていた。"
   ],
   "spec": {
+    "動作環境": "Mac OS X",
     "言語": "Python3",
     "GUI": "Tkinter",
     "DB": "sqlite3",
     "バイナリ化": "py2app",
+    "バージョン管理": "Git, GitHub",
     "ブラウザテストツール": "selenium"
   },
   "main": [
     "SNSに自動ログイン",
-    "タイムライン上のメディアに'LIKE'する",
-    "タグでメディアを検索して表示されたメディアに'LIKE'する",
+    "タイムライン上のメディアに\"LIKE\"する",
+    "タグでメディアを検索して表示されたメディアに\"LIKE\"する",
     "フォローバックする"
   ],
   "others": [
