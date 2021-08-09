@@ -2,7 +2,6 @@ import { Box } from "@material-ui/core";
 import ErrorPage from "next/error";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import Container from "../../components/container";
 import Layout from "../../components/layout";
 import PostHeader from "../../components/post-header";
 import PostTitle from "../../components/post-title";
@@ -11,8 +10,6 @@ import { SITE_NAME } from "../../lib/constants";
 import Post from "../../types/post";
 import MyHeader from "components/myheader";
 import PostBody from "components/post-body";
-import PostItemNormal from "components/post-item-normal";
-import PostItemSpecs from "components/post-item-specs";
 
 type Props = {
   post: Post;

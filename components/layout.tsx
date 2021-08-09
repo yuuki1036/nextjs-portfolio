@@ -1,9 +1,6 @@
-import { Box, Container, Theme } from "@material-ui/core";
-import { makeStyles } from "@material-ui/styles";
+import { Box, Container } from "@material-ui/core";
 import { VFC } from "react";
 import Footer from "./footer";
-import Meta from "./meta";
-import theme from "pages/theme";
 
 type Props = {
   children: React.ReactNode;

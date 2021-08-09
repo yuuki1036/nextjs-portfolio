@@ -1,5 +1,4 @@
 import { FC } from "react";
-import Container from "../components/container";
 import Layout from "../components/layout";
 import Profile from "../components/profile";
 import Works from "../components/works";

@@ -2,18 +2,13 @@ import {
   Box,
   Fab,
   Grid,
-  Theme,
   Typography,
 } from "@material-ui/core";
 import { GitHub, Launch } from "@material-ui/icons";
-import { makeStyles } from "@material-ui/styles";
-import Link from "next/link";
-import { FC, VFC } from "react";
+import { FC } from "react";
 import CoverImage from "./cover-image";
 import DateFormatter from "./date-formatter";
-import Avatar from "./myavatar";
 import PostTitle from "./post-title";
-import theme from "pages/theme";
 
 type Props = {
   title: string;

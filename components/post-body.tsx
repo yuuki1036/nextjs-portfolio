@@ -1,6 +1,4 @@
-import { Box } from "@material-ui/core";
 import { FC } from "react";
-import markdownStyles from "./markdown-styles.module.css";
 import PostItemNormal from "./post-item-normal";
 import PostItemSpecs from "./post-item-specs";
 import Post from "types/post";

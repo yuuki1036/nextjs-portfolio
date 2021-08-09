@@ -8,7 +8,7 @@ import Document, {
   NextScript,
 } from "next/document";
 import React from "react";
-import theme from "./theme";
+import theme from "../styles/theme";
 
 export default class MyDocument extends Document {
   render(): JSX.Element {
@@ -21,7 +21,7 @@ export default class MyDocument extends Document {
             content={theme.palette.primary.main}
           />
           <link
-            href="https://fonts.googleapis.com/css2?family=Roboto:300,400,500,700&family=Noto+Sans+JP&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap"
             rel="stylesheet"
           />
         </Head>

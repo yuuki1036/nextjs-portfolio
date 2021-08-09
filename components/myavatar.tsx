@@ -1,17 +1,12 @@
-import {
-  Avatar,
-  Box,
-  makeStyles,
-  Theme,
-} from "@material-ui/core";
+import { Avatar, makeStyles } from "@material-ui/core";
 import { VFC } from "react";
-import theme from "pages/theme";
+import theme from "../styles/theme";
 
 type Props = {
   size: "small" | "large";
 };
 
-const useStyles = makeStyles((theme: Theme) => ({
+const useStyles = makeStyles((theme) => ({
   small: {
     width: theme.spacing(6),
     height: theme.spacing(6),
@@ -23,7 +18,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 }));
 
 const MyAvatar: VFC<Props> = ({ size }) => {
-  const classes = useStyles(theme);
+  const classes = useStyles();
   return (
     <Avatar
       alt="yuuki1036"

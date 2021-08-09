@@ -2,7 +2,6 @@ import { Box, Grid, Typography } from "@material-ui/core";
 import Link from "next/link";
 import CoverImage from "./cover-image";
 import DateFormatter from "./date-formatter";
-import Avatar from "./myavatar";
 
 type Props = {
   title: string;
