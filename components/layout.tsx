@@ -8,14 +8,12 @@ type Props = {
 
 const Layout: VFC<Props> = ({ children }) => {
   return (
-    <>
-      <Container maxWidth="md">
-        <Box mt={4}>
-          <main>{children}</main>
-        </Box>
-        <Footer />
-      </Container>
-    </>
+    <Container maxWidth="md">
+      <Box mt={4}>
+        <main>{children}</main>
+      </Box>
+      <Footer />
+    </Container>
   );
 };
 

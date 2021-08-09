@@ -9,12 +9,17 @@ import Document, {
 } from "next/document";
 import React from "react";
 import theme from "../styles/theme";
+import { META_DESCRIPTION } from "lib/constants";
 
 export default class MyDocument extends Document {
   render(): JSX.Element {
     return (
       <Html lang="ja">
         <Head>
+          <meta
+            name="description"
+            content={META_DESCRIPTION}
+          />
           {/* PWA primary color */}
           <meta
             name="theme-color"
