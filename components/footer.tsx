@@ -40,7 +40,11 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Grid container spacing={2}>
+                <Grid
+                  container
+                  spacing={2}
+                  alignItems="center"
+                >
                   <Grid item>
                     <EmailOutlined fontSize="large" />
                   </Grid>

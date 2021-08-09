@@ -1,12 +1,12 @@
 import { Box, Container } from "@material-ui/core";
-import { VFC } from "react";
+import { FC } from "react";
 import Footer from "./footer";
 
 type Props = {
   children: React.ReactNode;
 };
 
-const Layout: VFC<Props> = ({ children }) => {
+const Layout: FC<Props> = ({ children }) => {
   return (
     <Container maxWidth="md">
       <Box mt={4}>
