@@ -26,7 +26,7 @@ const PostPreview = ({
           src={coverImage}
           slug={slug}
         />
-        <Box mt={2}>
+        <Box mt={1}>
           <Link
             as={`/posts/${slug}`}
             href="/posts/[slug]"

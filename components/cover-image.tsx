@@ -25,7 +25,7 @@ const CoverImage: FC<Props> = ({ title, src, slug }) => {
     </Grid>
   );
   return (
-    <div className="sm:mx-0">
+    <>
       {slug ? (
         <Grid container>
           <Box
@@ -37,7 +37,7 @@ const CoverImage: FC<Props> = ({ title, src, slug }) => {
               as={`/posts/${slug}`}
               href="/posts/[slug]"
             >
-              <a aria-label={title}>{image}</a>
+              <a>{image}</a>
             </Link>
           </Box>
         </Grid>
@@ -46,7 +46,7 @@ const CoverImage: FC<Props> = ({ title, src, slug }) => {
           <Box className={"shadow-small"}>{image}</Box>
         </Grid>
       )}
-    </div>
+    </>
   );
 };
 

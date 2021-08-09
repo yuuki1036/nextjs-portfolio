@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <footer>
       <Divider />
-      <Box mt={8} mb={8}>
+      <Box mt={5} mb={5}>
         <Grid container justifyContent="center">
           <Grid item>
             <a
@@ -33,7 +33,7 @@ const Footer = () => {
                 </Grid>
               </Grid>
             </a>
-            <Box mt={2}>
+            <Box mt={1}>
               <a
                 href="mailto:yuuki1036@gmail.com"
                 target="_blank"

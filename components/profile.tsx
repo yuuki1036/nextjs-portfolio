@@ -6,7 +6,7 @@ import { FC } from "react";
 const Profile: FC = () => {
   return (
     <section>
-      <Box mt={6}>
+      <Box mt={5}>
         <Grid container>
           <p>
             WEBエンジニアです。フロントエンド/バックエンド開発・インフラ構築を経験してきました。現在は

@@ -23,8 +23,8 @@ const useStyles = makeStyles((theme: Theme) => ({
     width: theme.spacing(28),
     height: theme.spacing(28),
     [theme.breakpoints.down("sm")]: {
-      width: theme.spacing(22),
-      height: theme.spacing(22),
+      width: theme.spacing(20),
+      height: theme.spacing(20),
     },
   },
 }));
