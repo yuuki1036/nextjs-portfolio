@@ -20,7 +20,7 @@ const Works: FC<Props> = ({ posts }) => {
         <Divider />
       </Box>
       <Box mt={4} mb={8}>
-        <Grid container spacing={6}>
+        <Grid container spacing={4}>
           {posts.map((post, i) => (
             <Grid item key={i} sm={12} md={6}>
               <PostPreview

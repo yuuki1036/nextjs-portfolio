@@ -1,3 +1,4 @@
+import { Box } from "@material-ui/core";
 import { FC } from "react";
 import Layout from "../components/layout";
 import Profile from "../components/profile";
@@ -12,13 +13,11 @@ type Props = {
 
 const Index: FC<Props> = ({ allPosts }) => {
   return (
-    <>
-      <Layout>
-        <MyHeader />
-        <Profile />
-        {allPosts.length > 0 && <Works posts={allPosts} />}
-      </Layout>
-    </>
+    <Layout>
+      <MyHeader />
+      <Profile />
+      {allPosts.length > 0 && <Works posts={allPosts} />}
+    </Layout>
   );
 };
 
