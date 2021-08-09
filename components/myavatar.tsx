@@ -14,10 +14,18 @@ const useStyles = makeStyles((theme: Theme) => ({
   small: {
     width: theme.spacing(6),
     height: theme.spacing(6),
+    [theme.breakpoints.down("sm")]: {
+      width: theme.spacing(4),
+      height: theme.spacing(4),
+    },
   },
   large: {
     width: theme.spacing(28),
     height: theme.spacing(28),
+    [theme.breakpoints.down("sm")]: {
+      width: theme.spacing(22),
+      height: theme.spacing(22),
+    },
   },
 }));
 

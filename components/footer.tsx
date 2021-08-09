@@ -26,12 +26,10 @@ const Footer = () => {
                 wrap="nowrap"
               >
                 <Grid item>
-                  <GitHub fontSize="large" />
+                  <GitHub fontSize="medium" />
                 </Grid>
                 <Grid item>
-                  <Typography variant="h6">
-                    yuuki1036
-                  </Typography>
+                  <p className="font-bold">yuuki1036</p>
                 </Grid>
               </Grid>
             </a>
@@ -48,12 +46,12 @@ const Footer = () => {
                   wrap="nowrap"
                 >
                   <Grid item>
-                    <EmailOutlined fontSize="large" />
+                    <EmailOutlined fontSize="medium" />
                   </Grid>
                   <Grid item>
-                    <Typography variant="h6">
+                    <p className="font-bold">
                       yuuki1036@gmail.com
-                    </Typography>
+                    </p>
                   </Grid>
                 </Grid>
               </a>

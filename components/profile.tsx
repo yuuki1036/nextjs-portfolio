@@ -6,13 +6,13 @@ import { FC } from "react";
 const Profile: FC = () => {
   return (
     <section>
-      <Box mt={5}>
+      <Box mt={6}>
         <Grid container>
-          <Typography variant="h6">
+          <p>
             WEBエンジニアです。フロントエンド/バックエンド開発・インフラ構築を経験してきました。現在は
             React, Next.js を勉強中です。
-          </Typography>
-          <Box mt={2}>
+          </p>
+          <Box mt={3}>
             <Link href="/experience" passHref>
               <a>
                 <Grid
@@ -24,9 +24,9 @@ const Profile: FC = () => {
                     <PlayCircleOutline fontSize="large" />
                   </Grid>
                   <Grid item>
-                    <Typography variant="h6">
+                    <p className="font-bold">
                       経験・スキル一覧
-                    </Typography>
+                    </p>
                   </Grid>
                 </Grid>
               </a>

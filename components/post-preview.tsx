@@ -33,17 +33,17 @@ const PostPreview = ({
             passHref
           >
             <a>
-              <Typography variant="h5">{title}</Typography>
+              <Typography variant="h6">{title}</Typography>
             </a>
           </Link>
         </Box>
         <Box>
-          <Typography variant="body1">
+          <p>
             <DateFormatter dateString={date} />
-          </Typography>
+          </p>
         </Box>
         <Box>
-          <Typography variant="body1">{excerpt}</Typography>
+          <p>{excerpt}</p>
         </Box>
       </Grid>
     </article>
