@@ -29,27 +29,21 @@ const PostItemSpecs: FC<Props> = ({ title, specs }) => {
     ),
   ];
   return (
-    <Box my={5}>
+    <Box my={3}>
       <Box>
-        <Typography variant="h5">{title}</Typography>
+        <Typography variant="h6" component="h3">
+          {title}
+        </Typography>
       </Box>
-      <Box mt={1} p={1}>
+      <Box mt={1}>
         <TableContainer>
           <Table size="small">
             <TableBody>
               {rows.map((row, i) => {
                 return (
                   <TableRow key={i}>
-                    <TableCell>
-                      <Typography variant="body1">
-                        {row.name}
-                      </Typography>
-                    </TableCell>
-                    <TableCell>
-                      <Typography variant="body1">
-                        {row.value}
-                      </Typography>
-                    </TableCell>
+                    <TableCell>{row.name}</TableCell>
+                    <TableCell>{row.value}</TableCell>
                   </TableRow>
                 );
               })}

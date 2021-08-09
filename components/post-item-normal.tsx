@@ -15,17 +15,15 @@ const PostItemNormal: FC<Props> = ({
   sentences,
 }) => {
   return (
-    <Box my={5}>
+    <Box my={3}>
       <Box mb={1}>
-        <Typography variant="h5">{title}</Typography>
+        <Typography variant="h6" component="h3">
+          {title}
+        </Typography>
       </Box>
       <Box>
         {sentences.map((str, i) => {
-          return (
-            <Typography variant="body1" key={i}>
-              {str}
-            </Typography>
-          );
+          return <p key={i}>{str}</p>;
         })}
       </Box>
     </Box>

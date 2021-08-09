@@ -13,10 +13,9 @@ import PostBody from "components/post-body";
 
 type Props = {
   post: Post;
-  morePosts: Post[];
 };
 
-const PostRender = ({ post, morePosts }: Props) => {
+const PostRender = ({ post }: Props) => {
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
@@ -40,7 +39,7 @@ const PostRender = ({ post, morePosts }: Props) => {
             launch={post.launch}
             source={post.source}
           />
-          <Box mt={4} mb={10}>
+          <Box mt={3} mb={6}>
             <PostBody post={post} />
           </Box>
         </>

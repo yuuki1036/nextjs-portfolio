@@ -14,7 +14,7 @@ type Props = {
 };
 
 const OtherSkillSet: VFC<Props> = ({ skills }) => (
-  <Box my={2}>
+  <Box my={1}>
     <List>
       {skills.map((skill, i) => {
         return (

@@ -27,12 +27,12 @@ const PostHeader: FC<Props> = ({
 }) => {
   return (
     <>
-      <Box mt={5}>
+      <Box mt={3}>
         <Grid container justifyContent="center">
           <CoverImage title={title} src={coverImage} />
         </Grid>
       </Box>
-      <Box mt={4} mb={1}>
+      <Box mt={3} mb={1}>
         <PostTitle>{title}</PostTitle>
       </Box>
 

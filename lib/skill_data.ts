@@ -75,7 +75,7 @@ export const FrameworkSkills = [
   },
   {
     title: "CSS",
-    items: ["BootStrap", "Tailwind CSS", "Material-UI"],
+    items: ["BootStrap", "Tailwind CSS"],
   },
   {
     title: "Component",

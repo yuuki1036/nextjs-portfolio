@@ -32,7 +32,7 @@ const Experience = () => {
           </Box>
         </Box>
         <Box className="rounded-md bg-gray-50">
-          <Box mt={4} pt={2} pb={3} px={2}>
+          <Box mt={4} pt={2} pb={2} px={2}>
             <Typography variant="h5" component="h3">
               Framework
             </Typography>
@@ -40,7 +40,7 @@ const Experience = () => {
           </Box>
         </Box>
         <Box className="rounded-md bg-gray-50">
-          <Box mt={4} pt={2} pb={3} px={2}>
+          <Box mt={4} pt={2} pb={1} px={2}>
             <Typography variant="h5" component="h3">
               Others
             </Typography>
