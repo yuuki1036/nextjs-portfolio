@@ -14,21 +14,15 @@ type Props = {
 };
 
 const SkillSet: VFC<Props> = ({ skills }) => (
-  <Box my={2}>
+  <Box mt={1}>
     <Grid container spacing={2} alignItems="baseline">
       {skills.map((skill, i) => {
         const items = skill.items;
         return (
           <Grid item xs={6} md={3} key={i}>
-            <Box mt={3}>
+            <Box mt={1}>
               <Typography variant="body1">
-                <Box
-                  fontWeight="fontWeightBold"
-                  m={0}
-                  p={0}
-                >
-                  {skill.title}
-                </Box>
+                <p className="font-bold">{skill.title}</p>
               </Typography>
               <Divider />
               <List>

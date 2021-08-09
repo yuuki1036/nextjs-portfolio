@@ -24,20 +24,26 @@ const Experience = () => {
           pageTitle={"experience"}
         />
         <Box className="rounded-md bg-gray-50">
-          <Box mt={4} pt={2} pb={3} px={2}>
-            <Typography variant="h5">Basic</Typography>
+          <Box mt={4} pt={2} pb={2} px={2}>
+            <Typography variant="h5" component="h3">
+              Basic
+            </Typography>
             <SkillSet skills={baseSkills} />
           </Box>
         </Box>
         <Box className="rounded-md bg-gray-50">
           <Box mt={4} pt={2} pb={3} px={2}>
-            <Typography variant="h5">Framework</Typography>
+            <Typography variant="h5" component="h3">
+              Framework
+            </Typography>
             <SkillSet skills={FrameworkSkills} />
           </Box>
         </Box>
         <Box className="rounded-md bg-gray-50">
           <Box mt={4} pt={2} pb={3} px={2}>
-            <Typography variant="h5">Others</Typography>
+            <Typography variant="h5" component="h3">
+              Others
+            </Typography>
             <OtherSkillSet skills={others} />
           </Box>
         </Box>

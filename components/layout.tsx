@@ -9,7 +9,7 @@ type Props = {
 const Layout: FC<Props> = ({ children }) => {
   return (
     <Container maxWidth="md">
-      <Box mt={4}>
+      <Box mt={3}>
         <main>{children}</main>
       </Box>
       <Footer />
