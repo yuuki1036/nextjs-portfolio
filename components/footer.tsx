@@ -23,6 +23,7 @@ const Footer = () => {
                 container
                 spacing={2}
                 alignItems="center"
+                wrap="nowrap"
               >
                 <Grid item>
                   <GitHub fontSize="large" />
@@ -44,6 +45,7 @@ const Footer = () => {
                   container
                   spacing={2}
                   alignItems="center"
+                  wrap="nowrap"
                 >
                   <Grid item>
                     <EmailOutlined fontSize="large" />
