@@ -5,7 +5,7 @@ import cn from "classnames";
 import Image from "next/image";
 import Link from "next/link";
 import { FC } from "react";
-import theme from "pages/theme";
+import theme from "styles/theme";
 
 type Props = {
   title: string;
