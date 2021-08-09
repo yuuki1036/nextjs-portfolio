@@ -21,7 +21,7 @@ const Footer = () => {
             >
               <Grid
                 container
-                spacing={2}
+                spacing={1}
                 alignItems="center"
                 wrap="nowrap"
               >
@@ -41,7 +41,7 @@ const Footer = () => {
               >
                 <Grid
                   container
-                  spacing={2}
+                  spacing={1}
                   alignItems="center"
                   wrap="nowrap"
                 >
