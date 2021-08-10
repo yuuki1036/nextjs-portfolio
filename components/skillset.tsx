@@ -6,14 +6,14 @@ import {
   ListItemText,
   Typography,
 } from "@material-ui/core";
-import { VFC } from "react";
+import { FC } from "react";
 import { Skill } from "types/skills";
 
 type Props = {
   skills: Skill[];
 };
 
-const SkillSet: VFC<Props> = ({ skills }) => (
+const SkillSet: FC<Props> = ({ skills }) => (
   <Box mt={1}>
     <Grid container spacing={2} alignItems="baseline">
       {skills.map((skill, i) => {

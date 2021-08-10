@@ -1,4 +1,4 @@
-import { Box, Grid, Typography } from "@material-ui/core";
+import { Box, Grid } from "@material-ui/core";
 import { PlayCircleOutline } from "@material-ui/icons";
 import Link from "next/link";
 import { FC } from "react";

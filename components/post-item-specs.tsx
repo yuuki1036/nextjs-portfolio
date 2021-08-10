@@ -1,14 +1,11 @@
 import {
   Box,
-  Divider,
   Table,
   TableBody,
   TableContainer,
   TableRow,
   TableCell,
   Typography,
-  TableHead,
-  Paper,
 } from "@material-ui/core";
 import { FC } from "react";
 import Spec from "types/spec";

@@ -1,11 +1,7 @@
-import internal from "stream";
-import { Box, Container, Grid } from "@material-ui/core";
-import { makeStyles } from "@material-ui/styles";
-import cn from "classnames";
+import { Box, Grid } from "@material-ui/core";
 import Image from "next/image";
 import Link from "next/link";
 import { FC } from "react";
-import theme from "styles/theme";
 
 type Props = {
   title: string;
@@ -34,15 +30,15 @@ const CoverImage: FC<Props> = ({ title, src, slug }) => {
             }
           >
             <Link
-              as={`/posts/${slug}`}
-              href="/posts/[slug]"
+              as={`/works/${slug}`}
+              href="/works/[slug]"
             >
               <a>{image}</a>
             </Link>
           </Box>
         </Grid>
       ) : (
-        <Grid container>
+        <Grid container justifyContent="center">
           <Box className={"shadow-small"}>{image}</Box>
         </Grid>
       )}

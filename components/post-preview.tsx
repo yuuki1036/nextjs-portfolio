@@ -1,5 +1,6 @@
 import { Box, Grid, Typography } from "@material-ui/core";
 import Link from "next/link";
+import { FC } from "react";
 import CoverImage from "./cover-image";
 import DateFormatter from "./date-formatter";
 
@@ -11,13 +12,13 @@ type Props = {
   slug: string;
 };
 
-const PostPreview = ({
+const PostPreview: FC<Props> = ({
   title,
   coverImage,
   date,
   excerpt,
   slug,
-}: Props) => {
+}) => {
   return (
     <article>
       <Grid item sm={10} md={12}>
@@ -28,8 +29,8 @@ const PostPreview = ({
         />
         <Box mt={1}>
           <Link
-            as={`/posts/${slug}`}
-            href="/posts/[slug]"
+            as={`/works/${slug}`}
+            href="/works/[slug]"
             passHref
           >
             <a>

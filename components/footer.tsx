@@ -1,11 +1,5 @@
-import {
-  Box,
-  Divider,
-  Grid,
-  Typography,
-} from "@material-ui/core";
+import { Box, Divider, Grid } from "@material-ui/core";
 import { EmailOutlined, GitHub } from "@material-ui/icons";
-import Link from "next/link";
 
 const Footer = () => {
   return (

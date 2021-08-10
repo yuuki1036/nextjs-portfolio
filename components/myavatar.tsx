@@ -3,7 +3,7 @@ import {
   makeStyles,
   Theme,
 } from "@material-ui/core";
-import { VFC } from "react";
+import { FC } from "react";
 import theme from "../styles/theme";
 
 type Props = {
@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
 }));
 
-const MyAvatar: VFC<Props> = ({ size }) => {
+const MyAvatar: FC<Props> = ({ size }) => {
   const classes = useStyles();
   return (
     <Avatar

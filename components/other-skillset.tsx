@@ -1,19 +1,18 @@
 import {
   Box,
-  Grid,
   List,
   ListItem,
   ListItemIcon,
   ListItemText,
 } from "@material-ui/core";
 import { ArrowRight } from "@material-ui/icons";
-import { VFC } from "react";
+import { FC } from "react";
 
 type Props = {
   skills: string[];
 };
 
-const OtherSkillSet: VFC<Props> = ({ skills }) => (
+const OtherSkillSet: FC<Props> = ({ skills }) => (
   <Box my={1}>
     <List>
       {skills.map((skill, i) => {
