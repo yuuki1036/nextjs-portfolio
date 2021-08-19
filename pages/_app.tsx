@@ -3,14 +3,17 @@ import { CssBaseline } from "@material-ui/core";
 import { ThemeProvider } from "@material-ui/styles";
 import { AppProps } from "next/app";
 import Head from "next/head";
+import { useRouter } from "next/router";
 import { useEffect } from "react";
 import theme from "../styles/theme";
 import { SITE_NAME } from "lib/constants";
+import { GA_TRACKING_ID, pageview } from "lib/gtag";
 
 const MyApp = ({
   Component,
   pageProps,
 }: AppProps): JSX.Element => {
+  const router = useRouter();
   useEffect(() => {
     // Remove the server-side injected CSS.
     const jssStyles = document.querySelector(
@@ -19,7 +22,18 @@ const MyApp = ({
     if (jssStyles) {
       jssStyles.parentElement!.removeChild(jssStyles);
     }
-  }, []);
+
+    // Google Analytics
+    if (!GA_TRACKING_ID) return;
+    const handleRouteChange = (url: string) =>
+      pageview(url);
+    router.events.on("routeChangeStart", handleRouteChange);
+    return () =>
+      router.events.off(
+        "routeChangeComplete",
+        handleRouteChange,
+      );
+  }, [router.events]);
 
   return (
     <>

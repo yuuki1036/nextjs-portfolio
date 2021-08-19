@@ -24,6 +24,7 @@
     "remark-html": "13.0.1"
   },
   "devDependencies": {
+    "@types/gtag.js": "^0.0.7",
     "@types/node": "^15.6.0",
     "@types/react": "17.0.14",
     "@types/react-dom": "^17.0.5",
