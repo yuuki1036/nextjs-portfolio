@@ -17,6 +17,7 @@ const CoverImage: FC<Props> = ({ title, src, slug }) => {
         alt={`Cover Image for ${title}`}
         width={440}
         height={220}
+        priority={true}
       />
     </Grid>
   );
