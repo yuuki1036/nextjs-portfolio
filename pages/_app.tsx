@@ -7,7 +7,7 @@ import { useRouter } from "next/router";
 import { useEffect } from "react";
 import theme from "../styles/theme";
 import { SITE_NAME } from "lib/constants";
-import { GA_TRACKING_ID, pageview } from "lib/gtag";
+import { GA_ID, pageview } from "lib/gtag";
 
 const MyApp = ({
   Component,
@@ -24,7 +24,7 @@ const MyApp = ({
     }
 
     // Google Analytics
-    if (!GA_TRACKING_ID) return;
+    if (!GA_ID) return;
     const handleRouteChange = (url: string) =>
       pageview(url);
     router.events.on("routeChangeStart", handleRouteChange);
