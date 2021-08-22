@@ -1,4 +1,4 @@
-export const GA_ID = process.env.NEXT_PUBLIC_GA_ID || "";
+export const GA_ID = process.env.GA_TRACKING_ID || "";
 
 // PV 測定
 export const pageview = (url: string): void => {
