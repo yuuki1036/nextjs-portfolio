@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.yuuki1036-portfolio.ml/
+
+# Sitemaps
+Sitemap: https://www.yuuki1036-portfolio.ml/sitemap.xml
