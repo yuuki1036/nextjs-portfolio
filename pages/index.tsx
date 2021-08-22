@@ -1,11 +1,18 @@
-import { Box } from "@material-ui/core";
-import { FC } from "react";
+import {
+  Backdrop,
+  Box,
+  makeStyles,
+  Theme,
+} from "@material-ui/core";
+import { useRouter } from "next/router";
+import { FC, useEffect, useState } from "react";
 import Layout from "../components/layout";
 import Profile from "../components/profile";
 import Works from "../components/works";
 import { getAllPosts } from "../lib/api";
 import Post from "../types/post";
 import MyHeader from "components/myheader";
+import theme from "styles/theme";
 
 type Props = {
   allPosts: Post[];
@@ -13,11 +20,13 @@ type Props = {
 
 const Index: FC<Props> = ({ allPosts }) => {
   return (
-    <Layout>
-      <MyHeader />
-      <Profile />
-      {allPosts.length > 0 && <Works posts={allPosts} />}
-    </Layout>
+    <>
+      <Layout>
+        <MyHeader />
+        <Profile />
+        {allPosts.length > 0 && <Works posts={allPosts} />}
+      </Layout>
+    </>
   );
 };
 

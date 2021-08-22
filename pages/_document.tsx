@@ -9,7 +9,7 @@ import Document, {
 } from "next/document";
 import React from "react";
 import theme from "../styles/theme";
-import { META_DESCRIPTION } from "lib/constants";
+import { META_DESCRIPTION, SITE_NAME } from "lib/constants";
 import { GA_ID } from "lib/gtag";
 
 export default class MyDocument extends Document {
@@ -38,15 +38,7 @@ export default class MyDocument extends Document {
               />
             </>
           )}
-          <meta
-            name="description"
-            content={META_DESCRIPTION}
-          />
-          {/* PWA primary color */}
-          <meta
-            name="theme-color"
-            content={theme.palette.primary.main}
-          />
+
           <link
             href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap"
             rel="stylesheet"
