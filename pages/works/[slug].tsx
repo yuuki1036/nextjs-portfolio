@@ -21,30 +21,38 @@ const PostRender = ({ post }: Props) => {
     return <ErrorPage statusCode={404} />;
   }
   return (
-    <Layout>
-      <MyHeader isIndex={false} pageTitle={"works"} />
-      {router.isFallback ? (
-        <PostTitle>Loading…</PostTitle>
-      ) : (
-        <>
-          <Head>
-            <title>
-              {post.title} | {SITE_NAME}
-            </title>
-          </Head>
-          <PostHeader
-            title={post.title}
-            coverImage={post.coverImage}
-            date={post.date}
-            launch={post.launch}
-            source={post.source}
-          />
-          <Box mt={3} mb={6}>
-            <PostBody post={post} />
-          </Box>
-        </>
-      )}
-    </Layout>
+    <>
+      <Head>
+        <meta
+          name="description"
+          content={`webエンジニア・webプログラマyuuki1036の制作物「${post.title}」の詳細ページです。${post.overView}`}
+        />
+      </Head>
+      <Layout>
+        <MyHeader isIndex={false} pageTitle={"works"} />
+        {router.isFallback ? (
+          <PostTitle>Loading…</PostTitle>
+        ) : (
+          <>
+            <Head>
+              <title>
+                {post.title} | {SITE_NAME}
+              </title>
+            </Head>
+            <PostHeader
+              title={post.title}
+              coverImage={post.coverImage}
+              date={post.date}
+              launch={post.launch}
+              source={post.source}
+            />
+            <Box mt={3} mb={6}>
+              <PostBody post={post} />
+            </Box>
+          </>
+        )}
+      </Layout>
+    </>
   );
 };
 

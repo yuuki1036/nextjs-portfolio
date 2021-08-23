@@ -9,7 +9,6 @@ import Document, {
 } from "next/document";
 import React from "react";
 import theme from "../styles/theme";
-import { META_DESCRIPTION, SITE_NAME } from "lib/constants";
 import { GA_ID } from "lib/gtag";
 
 export default class MyDocument extends Document {

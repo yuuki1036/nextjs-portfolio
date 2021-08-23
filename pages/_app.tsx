@@ -1,22 +1,13 @@
 import "../styles/index.css";
-import {
-  Backdrop,
-  CssBaseline,
-  makeStyles,
-  Theme,
-} from "@material-ui/core";
+import { CssBaseline } from "@material-ui/core";
 import { ThemeProvider } from "@material-ui/styles";
 import { AppProps } from "next/app";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import nProgress from "nprogress";
-import { FC, useEffect, useState } from "react";
+import { FC, useEffect } from "react";
 import theme from "../styles/theme";
-import {
-  META_DESCRIPTION,
-  SITE_NAME,
-  SITE_TITLE,
-} from "lib/constants";
+import { SITE_TITLE } from "lib/constants";
 import { GA_ID, pageview } from "lib/gtag";
 import "../styles/nprogress.css";
 
@@ -68,10 +59,6 @@ const MyApp: FC<AppProps> = ({ Component, pageProps }) => {
     <>
       <Head>
         <title>{SITE_TITLE}</title>
-        <meta
-          name="description"
-          content={META_DESCRIPTION}
-        />
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width"
