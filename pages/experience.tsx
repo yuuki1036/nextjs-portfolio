@@ -4,6 +4,7 @@ import Layout from "components/layout";
 import MyHeader from "components/myheader";
 import OtherSkillSet from "components/other-skillset";
 import SkillSet from "components/skillset";
+import { SITE_NAME } from "lib/constants";
 import {
   baseSkills,
   FrameworkSkills,
@@ -14,6 +15,7 @@ const Experience = () => {
   return (
     <>
       <Head>
+        <title>experience | {SITE_NAME}</title>
         <meta
           name="description"
           content="webエンジニア・webプログラマyuuki1036の業務経験・スキル一覧です。"
