@@ -1,27 +1,44 @@
 import {
   Box,
+  Fab,
+  IconButton,
   List,
   ListItem,
   ListItemIcon,
+  ListItemSecondaryAction,
   ListItemText,
 } from "@material-ui/core";
-import { ArrowRight } from "@material-ui/icons";
+import { ArrowRight, Launch } from "@material-ui/icons";
 import { FC } from "react";
+import { OtherSkill } from "types/other-skills";
 
 type Props = {
-  skills: string[];
+  skills: OtherSkill[];
 };
 
 const OtherSkillSet: FC<Props> = ({ skills }) => (
   <Box my={1}>
     <List>
-      {skills.map((skill, i) => {
+      {skills.map((data, i) => {
         return (
-          <ListItem disableGutters key={i}>
+          <ListItem key={i}>
             <ListItemIcon>
               <ArrowRight />
             </ListItemIcon>
-            <ListItemText primary={skill} />
+            <ListItemText primary={data.txt} />
+            {data.href && (
+              <ListItemSecondaryAction>
+                <a
+                  href={data.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <IconButton>
+                    <Launch />
+                  </IconButton>
+                </a>
+              </ListItemSecondaryAction>
+            )}
           </ListItem>
         );
       })}

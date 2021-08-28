@@ -84,9 +84,24 @@ export const FrameworkSkills = [
 ];
 
 export const others = [
-  "フルスクラッチECサイト（月間15万PV）の全面リニューアル作業",
-  "ECサイト管理画面の設計・実装",
-  "WebPageTest, Google Lighthouse 等を用いたサイトパフォーマンス解析・改善",
-  "暗号化の知識・実装",
-  "競技プログラミングへの参加（atcoder, paiza 等）",
+  {
+    txt: "PHP製フルスクラッチECサイト（月間15万PV）の全面リニューアル",
+    href: "https://www.e-tamaya.co.jp",
+  },
+  {
+    txt: "ECサイト管理画面の設計・実装",
+    href: null,
+  },
+  {
+    txt: "ドラッグ&ドロップ・追加/削除/変更/ソート可能なフォームUIの設計・実装",
+    href: null,
+  },
+  {
+    txt: "WebPageTest, Google Lighthouse 等を用いたサイトパフォーマンス解析・改善",
+    href: null,
+  },
+  {
+    txt: "競技プログラミングへの参加（atcoder, paiza 等）",
+    href: null,
+  },
 ];

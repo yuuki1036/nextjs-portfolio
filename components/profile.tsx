@@ -9,8 +9,9 @@ const Profile: FC = () => {
       <Box mt={5}>
         <Grid container>
           <p>
-            WEBエンジニアです。フロントエンド/バックエンド開発・インフラ構築を経験してきました。現在は
-            React, Next.js を勉強中です。
+            WEBエンジニアです。フロントエンド/バックエンド開発・インフラ構築を経験してきました。React,
+            Next.js
+            を勉強中です。またクラウド技術の学習を兼ねて、AWS認定ソリューションアーキテクトアソシエイトの資格取得を目指しています。
           </p>
           <Box mt={3}>
             <Link href="/experience" passHref>
