@@ -36,7 +36,7 @@ export const baseSkills = [
   },
   {
     title: "クラウドサービス",
-    items: ["AWS EC2", "Heroku", "Firebase", "Vercel"],
+    items: ["AWS", "Heroku", "Firebase", "Vercel"],
   },
   {
     title: "バージョン管理",
