@@ -105,3 +105,10 @@ export const others = [
     href: null,
   },
 ];
+
+export const certification = [
+  {
+    txt: "AWS認定ソリューションアーキテクト - アソシエイト 取得",
+    href: "https://www.credly.com/badges/122e88cb-c759-469d-908b-d5a010882623/public_url",
+  },
+];

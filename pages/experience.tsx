@@ -7,6 +7,7 @@ import SkillSet from "components/skillset";
 import { SITE_NAME } from "lib/constants";
 import {
   baseSkills,
+  certification,
   FrameworkSkills,
   others,
 } from "lib/skill_data";
@@ -44,11 +45,19 @@ const Experience = () => {
             </Box>
           </Box>
           <Box className="rounded-md bg-gray-50">
-            <Box mt={4} pt={2} pb={1} px={2}>
+            <Box mt={4} pt={2} pb={2} px={2}>
               <Typography variant="h5" component="h3">
                 Others
               </Typography>
               <OtherSkillSet skills={others} />
+            </Box>
+          </Box>
+          <Box className="rounded-md bg-gray-50">
+            <Box mt={4} pt={2} pb={1} px={2}>
+              <Typography variant="h5" component="h3">
+                certification
+              </Typography>
+              <OtherSkillSet skills={certification} />
             </Box>
           </Box>
         </Box>
