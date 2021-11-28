@@ -34,7 +34,7 @@ const MyAvatar: FC<Props> = ({ size }) => {
   return (
     <Avatar
       alt="yuuki1036"
-      src="/images/profile.jpg"
+      src="/images/profile.webp"
       className={
         size === "small" ? classes.small : classes.large
       }
