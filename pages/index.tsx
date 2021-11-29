@@ -12,6 +12,7 @@ import Profile from "../components/profile";
 import Works from "../components/works";
 import { getAllPosts } from "../lib/api";
 import Post from "../types/post";
+import Certification from "components/certification";
 import MyHeader from "components/myheader";
 import theme from "styles/theme";
 
@@ -32,6 +33,7 @@ const Index: FC<Props> = ({ allPosts }) => {
         <MyHeader />
         <Profile />
         {allPosts.length > 0 && <Works posts={allPosts} />}
+        <Certification />
       </Layout>
     </>
   );
