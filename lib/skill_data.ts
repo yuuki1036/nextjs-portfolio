@@ -18,7 +18,13 @@ export const baseSkills = [
   },
   {
     title: "データベース",
-    items: ["MySQL", "SQLite", "PostgreSQL", "SQL Server"],
+    items: [
+      "MySQL",
+      "SQLite",
+      "PostgreSQL",
+      "DynamoDB",
+      "SQL Server",
+    ],
   },
   {
     title: "開発環境",
