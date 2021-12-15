@@ -3,10 +3,10 @@
   "excerpt": "ごみ捨て支援LINEBOT",
   "coverImage": "/images/works/53st.png",
   "date": "2021-12-13",
-  "launch": "https://lin.ee/2FIeAR0",
+  "launch": "",
   "source": "https://github.com/yuuki1036/trash-disposal-notification",
   "overView": [
-    "LINEを使って毎日のごみ捨てをサポート。曜日ごとに設定した内容を毎朝7時に通知します。画像のQRコードまたは上記リンクボタンより友だち追加が可能です。"
+    "LINEを使って毎日のごみ捨てをサポート。曜日ごとに設定した内容を毎朝7時に通知します。画像のQRコードより友だち追加が可能です。"
   ],
   "chronology": [
     "AWSを用いたサーバレスアーキテクチャを学習するため。"
