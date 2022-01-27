@@ -1,0 +1,31 @@
+{
+  "title": "HITOKOTO",
+  "excerpt": "Twitterクローン",
+  "coverImage": "/images/works/hitokoto.png",
+  "date": "2022-01-27",
+  "launch": "https://laravel-react-twitter.herokuapp.com",
+  "source": "https://github.com/yuuki1036/laravel-docker",
+  "overView": [
+    "React x Laravel Twitterクローン。ユーザー認証後に何かつぶやくことができます。まだ開発途中です。"
+  ],
+  "chronology": [
+    "PHPフレームワーク Laravel 及び、React によるSPAを学習するため。"
+  ],
+  "spec": {
+    "動作環境": "ブラウザ（pc/tablet/mobile）",
+    "言語": "PHP, TypeScript",
+    "フレームワーク": "Laravel, React, Tailwind CSS",
+    "開発環境": "Docker",
+    "Pass": "Heroku",
+    "バージョン管理": "Git, GitHub"
+  },
+  "main": [
+    "登録・ログイン・パスワードリセットなどの認証機能"
+  ],
+  "others": ["レスポンシブデザイン。"],
+  "learned": [
+    "Dockerを使ったLaravel開発環境の作成",
+    "Laravelの基本的な機能・構造",
+    "LaravelとReactの連携"
+  ]
+}
