@@ -1,31 +1,39 @@
 {
   "title": "HITOKOTO",
-  "excerpt": "Twitterクローン",
+  "excerpt": "Twitterクローン(web版)",
   "coverImage": "/images/works/hitokoto.png",
-  "date": "2022-01-27",
-  "launch": "https://laravel-react-twitter.herokuapp.com",
-  "source": "https://github.com/yuuki1036/laravel-docker",
+  "date": "2022-02-07",
+  "launch": "https://react-auth0-laravel-twitter.herokuapp.com",
+  "source": "https://github.com/yuuki1036/react-auth0-laravel-twitter",
   "overView": [
-    "React x Laravel Twitterクローン。ユーザー認証後に何かつぶやくことができます。まだ開発途中です。"
+    "React x Laravel Twitterクローン。ログインしていなくても投稿できます。まだ開発途中です。"
   ],
   "chronology": [
     "PHPフレームワーク Laravel 及び、React によるSPAを学習するため。"
   ],
   "spec": {
-    "動作環境": "ブラウザ（pc/tablet/mobile）",
-    "言語": "PHP, TypeScript",
-    "フレームワーク": "Laravel, React, Tailwind CSS",
+    "動作環境": "ブラウザ（pcのみ）",
+    "言語": "TypeScript, PHP",
+    "フロントエンド": "React",
+    "バックエンド": "Laravel",
+    "スタイリング": "Material-UI",
+    "データベース": "PostgreSQL",
+    "認証": "Auth0",
     "開発環境": "Docker",
     "Pass": "Heroku",
     "バージョン管理": "Git, GitHub"
   },
   "main": [
-    "登録・ログイン・パスワードリセットなどの認証機能"
+    "ツィートする（匿名も可能）",
+    "投稿に対して「いいね」する"
   ],
-  "others": ["レスポンシブデザイン。"],
+  "others": [
+    "Auth0を利用した認証機能（ソーシャルログイン可）"
+  ],
   "learned": [
-    "Dockerを使ったLaravel開発環境の作成",
+    "Dockerを使ったLaravel開発環境構築",
     "Laravelの基本的な機能・構造",
-    "LaravelとReactの連携"
+    "LaravelとReactの連携",
+    "ReactHooksの取り扱い"
   ]
 }
