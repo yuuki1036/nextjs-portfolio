@@ -5,6 +5,7 @@
   "date": "2018-12-08",
   "launch": "https://fujoker-reversi.herokuapp.com",
   "source": "https://github.com/yuuki1036/reversi",
+  "tag": ["Python3", "Django"],
   "overView": [
     "Python製WEBアプリです。シンプルなリバーシゲームをプレイできます。",
     "対戦相手の強さを選択したり、ランキングでスコアを他ユーザーと競うことができます。"

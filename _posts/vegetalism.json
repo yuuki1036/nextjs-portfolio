@@ -5,6 +5,7 @@
   "date": "2019-02-02",
   "launch": "http://vegetalism.ml/",
   "source": "https://github.com/yuuki1036/vegetalism",
+  "tag": ["PHP"],
   "overView": [
     "デモECサイトです。商品を野菜にしぼり、実際に想定されるような機能を追加しました。"
   ],

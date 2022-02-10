@@ -5,6 +5,7 @@
   "date": "2021-08-10",
   "launch": "",
   "source": "https://github.com/yuuki1036/nextjs-portfolio",
+  "tag": ["Next.js", "TypeScript", "Vercel"],
   "overView": [
     "自己紹介サイト。Next.jsのSSGにより高速に動作します。Material-UIとTailwind CSSでスタイリングしました。"
   ],

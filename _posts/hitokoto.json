@@ -5,6 +5,7 @@
   "date": "2022-02-07",
   "launch": "https://react-auth0-laravel-twitter.herokuapp.com",
   "source": "https://github.com/yuuki1036/react-auth0-laravel-twitter",
+  "tag": ["React", "TypeScript", "Laravel"],
   "overView": [
     "React x Laravel Twitterクローン。ログインしていなくても投稿できます。まだ開発途中です。"
   ],
@@ -17,9 +18,9 @@
     "フロントエンド": "React",
     "バックエンド": "Laravel",
     "スタイリング": "Material-UI",
-    "データベース": "PostgreSQL",
+    "DB": "PostgreSQL",
     "認証": "Auth0",
-    "開発環境": "Docker",
+    "コンテナ": "Docker",
     "Pass": "Heroku",
     "バージョン管理": "Git, GitHub"
   },

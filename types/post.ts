@@ -8,6 +8,7 @@ type Post = {
   date: string;
   launch?: string;
   source?: string;
+  tag: string[];
   overView: string[];
   chronology?: string[];
   spec: Spec;

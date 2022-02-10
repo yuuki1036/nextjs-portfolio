@@ -8,9 +8,10 @@ export const baseSkills = [
     items: [
       "JavaScript",
       "PHP",
+      "Python",
+      "TypeScript",
       "HTML",
       "CSS/Sass",
-      "Python",
       "Ruby",
       "C++",
       "Java",
@@ -20,7 +21,6 @@ export const baseSkills = [
     title: "データベース",
     items: [
       "MySQL",
-      "SQLite",
       "PostgreSQL",
       "DynamoDB",
       "SQL Server",
@@ -42,7 +42,7 @@ export const baseSkills = [
   },
   {
     title: "クラウドサービス",
-    items: ["AWS", "Heroku", "Firebase", "Vercel"],
+    items: ["AWS", "Heroku", "Firebase", "Vercel", "Auth0"],
   },
   {
     title: "バージョン管理",
@@ -67,7 +67,6 @@ export const FrameworkSkills = [
     title: "JavaScript",
     items: [
       "Node.js",
-      "TypeScript",
       "React",
       "Next.js",
       "Vue.js",
@@ -76,22 +75,22 @@ export const FrameworkSkills = [
     ],
   },
   {
+    title: "PHP",
+    items: ["Laravel"],
+  },
+  {
     title: "Python",
     items: ["Django"],
   },
   {
     title: "CSS",
-    items: ["BootStrap", "Tailwind CSS"],
-  },
-  {
-    title: "Component",
-    items: ["Material-UI"],
+    items: ["BootStrap", "Tailwind CSS", "Material-UI"],
   },
 ];
 
 export const others = [
   {
-    txt: "PHP製フルスクラッチECサイト（月間15万PV）の全面リニューアル",
+    txt: "ECサイト（月間15万PV）のフルリニューアル・移管経験",
     href: "https://www.e-tamaya.co.jp",
   },
   {
@@ -99,7 +98,7 @@ export const others = [
     href: null,
   },
   {
-    txt: "ドラッグ&ドロップ・追加/削除/変更/ソート可能なフォームUIの設計・実装",
+    txt: "インタラクティブなフォームUIの設計・実装",
     href: null,
   },
   {

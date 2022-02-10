@@ -40,6 +40,7 @@ const Works: FC<Props> = ({ posts }) => {
                   key={post.slug}
                   title={post.title}
                   coverImage={post.coverImage}
+                  tag={post.tag}
                   date={post.date}
                   slug={post.slug}
                   excerpt={post.excerpt}

@@ -5,6 +5,7 @@
   "date": "2019-03-24",
   "launch": "",
   "source": "https://github.com/yuuki1036/inorganiclikes",
+  "tag": ["Python3", "Tkinter"],
   "overView": [
     "Mac OS用デスクトップアプリ。ブラウザテストツールを使ってSNSにログインします。「いいね」やユーザーのフォロー等のアクションを自動で実行します。"
   ],

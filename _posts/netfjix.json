@@ -5,6 +5,7 @@
   "date": "2021-08-18",
   "launch": "https://nextjs-netflix-clone-ten.vercel.app/",
   "source": "https://github.com/yuuki1036/nextjs-netflix-clone",
+  "tag": ["Next.js", "TypeScript", "Vercel"],
   "overView": [
     "Netflixを模したNext.js製映画情報サイト。映画情報API「TMDb」から取得したデータを表示します。予告動画が存在すれば自動再生します。"
   ],

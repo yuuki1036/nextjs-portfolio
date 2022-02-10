@@ -1,4 +1,10 @@
-import { Box, Grid, Typography } from "@material-ui/core";
+import {
+  Box,
+  Chip,
+  emphasize,
+  Grid,
+  Typography,
+} from "@material-ui/core";
 import Link from "next/link";
 import { FC } from "react";
 import CoverImage from "./cover-image";
@@ -7,6 +13,7 @@ import DateFormatter from "./date-formatter";
 type Props = {
   title: string;
   coverImage: string;
+  tag: string[];
   date: string;
   excerpt: string;
   slug: string;
@@ -15,6 +22,7 @@ type Props = {
 const PostPreview: FC<Props> = ({
   title,
   coverImage,
+  tag,
   date,
   excerpt,
   slug,
@@ -33,9 +41,35 @@ const PostPreview: FC<Props> = ({
             href="/works/[slug]"
             passHref
           >
-            <a>
-              <Typography variant="h6">{title}</Typography>
-            </a>
+            <Grid container spacing={2} alignItems="center">
+              <Grid item>
+                <Typography variant="h6">
+                  {title}
+                </Typography>
+              </Grid>
+              <Grid item>
+                <Box
+                  display={{
+                    xs: "none",
+                    sm: "none",
+                    md: "block",
+                  }}
+                >
+                  {tag.map((value, i) => (
+                    <>
+                      <Chip
+                        key={i}
+                        variant="outlined"
+                        size="small"
+                        color="primary"
+                        label={value}
+                      />
+                      &ensp;
+                    </>
+                  ))}
+                </Box>
+              </Grid>
+            </Grid>
           </Link>
         </Box>
         <Box>
