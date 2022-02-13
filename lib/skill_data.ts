@@ -90,7 +90,7 @@ export const FrameworkSkills = [
 
 export const others = [
   {
-    txt: "ECサイト（月間15万PV）のフルリニューアル・移管経験",
+    txt: "ECサイト（月間15万PV）のリプレース・サーバー移管経験",
     href: "https://www.e-tamaya.co.jp",
   },
   {
