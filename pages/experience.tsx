@@ -22,7 +22,7 @@ const Experience = () => {
           content="webエンジニア・webプログラマyuuki1036の業務経験・スキル一覧です。"
         />
       </Head>
-      <Layout>
+      <Layout isBack={true}>
         <Box mb={8}>
           <MyHeader
             isIndex={false}

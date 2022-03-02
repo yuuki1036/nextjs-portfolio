@@ -19,7 +19,7 @@ const PostItemNormal: FC<Props> = ({
       </Box>
       <Box>
         {sentences.map((str, i) => {
-          return <p key={i}>{str}</p>;
+          return <Typography key={i}>{str}</Typography>;
         })}
       </Box>
     </Box>

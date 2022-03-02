@@ -1,4 +1,9 @@
-import { Box, Grid } from "@material-ui/core";
+import {
+  Box,
+  Button,
+  Grid,
+  Typography,
+} from "@material-ui/core";
 import { PlayCircleOutline } from "@material-ui/icons";
 import Link from "next/link";
 import { FC } from "react";
@@ -8,28 +13,21 @@ const Profile: FC = () => {
     <section>
       <Box mt={5}>
         <Grid container>
-          <p>
+          <Typography>
             WEB系フルスタックエンジニアです。主にECサイトの開発・保守を経験してきました。最近はReactやTypeScriptを勉強しています。クラウドの学習を兼ねてAWS認定ソリューションアーキテクトアソシエイトを取得しました。
             <br />
             現在はフリーランスエンジニアとして案件をこなしながら、転職活動を行っています。
-          </p>
+          </Typography>
           <Box mt={3}>
             <Link href="/experience" passHref>
               <a>
-                <Grid
-                  container
-                  spacing={1}
-                  alignItems="center"
+                <Button
+                  variant="outlined"
+                  size="large"
+                  startIcon={<PlayCircleOutline />}
                 >
-                  <Grid item>
-                    <PlayCircleOutline fontSize="large" />
-                  </Grid>
-                  <Grid item>
-                    <p className="font-bold">
-                      経験・スキル一覧
-                    </p>
-                  </Grid>
-                </Grid>
+                  経験・スキル一覧
+                </Button>
               </a>
             </Link>
           </Box>

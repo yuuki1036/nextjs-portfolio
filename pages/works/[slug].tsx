@@ -21,7 +21,7 @@ const PostRender = ({ post }: Props) => {
     return <ErrorPage statusCode={404} />;
   }
   return (
-    <Layout>
+    <Layout isBack={true}>
       <MyHeader isIndex={false} pageTitle={"works"} />
       {router.isFallback ? (
         <PostTitle>Loading…</PostTitle>

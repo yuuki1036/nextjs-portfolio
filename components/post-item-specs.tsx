@@ -39,8 +39,12 @@ const PostItemSpecs: FC<Props> = ({ title, specs }) => {
               {rows.map((row, i) => {
                 return (
                   <TableRow key={i}>
-                    <TableCell>{row.name}</TableCell>
-                    <TableCell>{row.value}</TableCell>
+                    <TableCell>
+                      <Typography>{row.name}</Typography>
+                    </TableCell>
+                    <TableCell>
+                      <Typography>{row.value}</Typography>
+                    </TableCell>
                   </TableRow>
                 );
               })}
